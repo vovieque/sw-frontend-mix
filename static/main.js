@@ -38,7 +38,7 @@ const linkText = (sourceText, urls) => {
   result += sourceText.substring(textPointer);
   return result;
 };
-const tagText = (sourceText) => sourceText.replace(/\B#(\w+)/g, '<a href="https://twitter.com/hashtag/$1?src=hash">#$1</a>');
+const tagText = (sourceText) => sourceText.replace(/(^|\W)#(\w+)/g, '$1<a href="https://twitter.com/hashtag/$2?src=hash">#$2</a>');
 
 const renderTweets = (data) => {
   let html = data.map(tweet => {
