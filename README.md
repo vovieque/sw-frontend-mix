@@ -9,11 +9,12 @@ Clone the repo.
 ```bash
 npm i
 ```
-### Put your token.
+### Put your token
 Put your own [Bearer Token](https://dev.twitter.com/oauth/application-only) for Twitter API in `config.json`.
 
 ### Run server
 ```bash
 npm run start
 ```
-### Open the page in a browser
+### Open the page
+Open the page in a browser.
