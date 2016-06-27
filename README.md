@@ -10,7 +10,7 @@ Clone the repo.
 npm i
 ```
 ### Put your token.
-Put your own [Bearer Token](https://dev.twitter.com/oauth/application-only) for Twitter API.
+Put your own [Bearer Token](https://dev.twitter.com/oauth/application-only) for Twitter API in `config.json`.
 
 ### Run server
 ```bash
