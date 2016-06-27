@@ -1,7 +1,151 @@
-.logo {
-	text-align: center;
+.page {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #efefef;
+  margin: 0;
 }
 .header {
-	color: red;
-	font-size: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #E62884;
+  text-align: center;
+}
+.header__logo {
+  height: 60px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.content {
+  margin: 90px auto 0;
+  width: 60%;
+}
+.content__loader {
+  text-align: center;
+}
+
+.tweet {
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 8px;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-height: 68px;
+}
+.tweet__content {
+  margin-left: 58px;
+}
+.tweet__avatar {
+  float: left;
+  margin-left: -58px;
+}
+.tweet__avatar-img {
+  border-radius: 5px;
+}
+.tweet__img {
+  width: 100%;
+}
+.tweet__name {
+  font-weight: bold;
+}
+.tweet__name a {
+  color: #000;
+  text-decoration: none;
+}
+.tweet__name a:hover {
+  text-decoration: underline;
+}
+.tweet__login a {
+  color: #8899a6;
+  text-decoration: none;
+}
+.tweet__login a:hover {
+  text-decoration: underline;
+}
+.tweet__text {
+  font-size: 26px;
+  line-height: 32px;
+}
+.tweet__text a {
+  color: #E62884;
+  text-decoration: none;
+}
+.tweet__text a:hover {
+  text-decoration: underline;
+}
+.tweet__date {
+  color: #8899a6;
+}
+.tweet__date::before {
+  content: "\00b7";
+  margin-right: 3px;
+}
+
+.spin_theme_islands {
+  position: absolute;
+  display: inline-block;
+  visibility: hidden;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+.spin_theme_islands:after {
+  content: '\00A0';
+}
+.spin_theme_islands.spin_visible {
+  position: relative;
+  visibility: visible;
+  animation: spin_theme_islands 1s infinite linear;
+  background: linear-gradient(1deg, rgba(0,0,0,0), rgba(0,0,0,0));
+  backface-visibility: hidden;
+}
+.spin_theme_islands.spin_size_xs {
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  background-position: -2px -2px;
+}
+.spin_theme_islands.spin_size_s {
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  background-position: -2px -19px;
+}
+.spin_theme_islands.spin_size_m {
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  background-position: -2px -44px;
+}
+.spin_theme_islands.spin_size_l {
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  background-position: -2px -73px;
+}
+.spin_theme_islands.spin_size_xl {
+  line-height: 38px;
+  width: 38px;
+  height: 38px;
+  background-position: -2px -106px;
+}
+@keyframes spin_theme_islands {
+  from {
+    border-top-color: #E62884;
+    border-left-color: #E62884;
+    transform: rotate(0);
+  }
+  to {
+    border-top-color: #E62884;
+    border-left-color: #E62884;
+    transform: rotate(360deg);
+  }
+}
+.spin_theme_islands.spin_paused {
+  animation: none;
+  border-top-color: #E62884;
+  border-left-color: #E62884;
 }

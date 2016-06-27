@@ -5,9 +5,7 @@ const app = express();
 const request = require('request');
 
 app.use('/', express.static('static'));
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+
 app.get('/ajax/get-frontend-tweets', (req, res) => {
 	const bearerToken = require('./config').bearer_token;
 	const getTweetsUrl = 'https://api.twitter.com/1.1/search/tweets.json?q=%23frontend&result_type=recent';
@@ -20,8 +18,14 @@ app.get('/ajax/get-frontend-tweets', (req, res) => {
 	};
 	request(requestOpts, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
+			res.set('Content-Type', 'application/json; charset=utf-8');
 			res.send(body);
-			res.end()
+		} else {
+			res.send(error || response);
 		}
 	});
+});
+
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
