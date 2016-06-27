@@ -2,13 +2,18 @@
 
 ## How to use
 
-* Clone the repo.
-* Install dependencies.
+### Clone
+Clone the repo.
+
+### Install dependencies
 ```bash
 npm i
 ```
-* Run server.
+### Put your token.
+Put your own [Bearer Token](https://dev.twitter.com/oauth/application-only) for Twitter API.
+
+### Run server
 ```bash
 npm run start
 ```
-* Open the page in a browser.
+### Open the page in a browser
